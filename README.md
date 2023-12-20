@@ -1,5 +1,7 @@
 # dwes_t3_examen
 
+**GitHub:** https://github.com/DavCode46/DWES_TEMA3_EXAMEN.git
+
 ```sql
 INSERT INTO PuntosDeRecogida (localidad, direccion, capacidad, ocupadas) VALUES
 ('Gijón', 'Calle Corrida, Gijón', 14, 14),

@@ -62,7 +62,9 @@ if (isset($_GET['localidad'])) {
         // TODO 3: Imprimir filas de tabla //
         /////////////////////////////////////
         while($row = $resultado->fetch(PDO::FETCH_ASSOC)) {
-            echo "<tr><td>" . htmlspecialchars($row["localidad"]) . "</td><td>" . htmlspecialchars($row["direccion"]) . "</td><td>" . htmlspecialchars($row["capacidad"]) . "</td><td>" . htmlspecialchars($row["ocupadas"]) . "</td></tr>";
+            if($row['ocupadas'] !== $row['capacidad']){
+                echo "<tr><td>" . htmlspecialchars($row["localidad"]) . "</td><td>" . htmlspecialchars($row["direccion"]) . "</td><td>" . htmlspecialchars($row["capacidad"]) . "</td><td>" . htmlspecialchars($row["ocupadas"]) . "</td></tr>";
+            }
         }
         echo "</table>";
     } else {
